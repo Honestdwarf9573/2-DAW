@@ -1,0 +1,59 @@
+.principal{
+padding: 5px;
+display: flex;
+flex-wrap: nowrap;
+
+}
+
+.lateral{
+    display: flex;
+   flex-direction: column; 
+   border: 10px solid yellow;
+  width: auto;
+  height: auto;
+
+ 
+ 
+ 
+   align-items: center;
+}
+
+.contenido{
+    background-color: antiquewhite;
+    border: 10px solid red;
+display: flex;
+flex-direction: column;
+width: auto;
+height: auto;
+padding: 100px;
+}
+
+
+.caja1{
+    
+    padding-bottom: 5%;
+}
+
+.caja2{
+    padding-top:90% ;
+}
+
+.caja3{
+    border: 10px solid olive;
+display: flex;
+flex-direction: row;
+padding: 5%;
+padding-bottom: 5%;
+}
+
+.caja4{
+    border: 10px solid olive;
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+
+}
+
+p{
+    padding-left: 15px;
+}

@@ -1,0 +1,6 @@
+@media (max-width: 100px) {
+    p {
+      display: none;
+    }
+  }
+  

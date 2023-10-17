@@ -1,0 +1,17 @@
+body{
+    box-sizing: border-box;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+div{
+border: 10px solid burlywood;
+}
+img{
+  
+  max-width: 1200px;
+  max-height: 1200px;
+  min-height: 300px;
+  min-width: 300px;
+}
