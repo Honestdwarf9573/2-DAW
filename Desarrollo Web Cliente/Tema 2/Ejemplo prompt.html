@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo prompt</title>
+</head>
+<body>
+    <script>
+        var nota;
+        var intentos=3;
+        var acertar=false;
+        while(intentos>0){
+            nota = prompt("Di tu nota entre 0 y 10");
+            if(nota >= 0 && nota <= 10){
+                alert("Tu nota es: " + nota);
+                break;
+            }
+            intentos--;
+        }
+
+        
+  if (intentos < 0) {
+    alert("La nota ingresada no es válida. Por favor, inténtalo de nuevo. Te quedan " + intentos + " intentos.");
+  } else {
+    alert("Lo siento, has agotado tus intentos.");
+  }
+    </script>
+</body>
+</html>
+

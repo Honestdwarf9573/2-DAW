@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversión de número a base deseada</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Conversión de número a base deseada</h1>
+	<p>Introduce un número entero:</p>
+	<input type="number" id="numero">
+	<p>Introduce la base deseada:</p>
+	<input type="number" id="base">
+	<button onclick="calcular()">Calcular</button>
+	<p id="resultado"></p>
+
+	<script>
+		function calcular() {
+			var numero = parseInt(document.getElementById("numero").value);
+			var base = parseInt(document.getElementById("base").value);
+			var resultado = numero.toString(base);
+			document.getElementById("resultado").innerHTML = "Número en base " + base + ": " + resultado;
+		}
+	</script>
+</body>
+</html>

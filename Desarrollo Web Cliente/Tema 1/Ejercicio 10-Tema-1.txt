@@ -1,0 +1,9 @@
+Ventajas más importantes de JavaScript:
+
+-Puede modificar el contenido de una página web.
+
+-Puede cambiar atributos de objetos HTML.
+
+-Puede cambiar el estilo CSS.
+
+-Se puede comunicar con el exterior mediante distintos comandos(console.log, innerHTML, document.write(), window.alert()).

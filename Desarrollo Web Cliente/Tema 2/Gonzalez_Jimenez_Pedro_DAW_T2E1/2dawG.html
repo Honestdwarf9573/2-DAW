@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contadores y número introducido</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Contadores y número introducido</h1>
+	<p>Introduce un número:</p>
+	<input type="number" id="numero">
+	<button onclick="calcular()">Calcular</button>
+	<p id="resultado"></p>
+
+	<script>
+		function calcular() {
+			var numero = parseInt(document.getElementById("numero").value);
+			var contador1 = numero + 5;
+			var contador2 = numero + 21;
+			var contador3 = numero - 4;
+			document.getElementById("resultado").innerHTML = "Número introducido: " + numero + "<br>Contadores: " + contador1 + "\t" + contador2 + "\t" + contador3;
+		}
+	</script>
+</body>
+</html>

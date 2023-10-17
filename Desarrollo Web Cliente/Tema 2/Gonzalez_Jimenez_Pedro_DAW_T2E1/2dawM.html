@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Números introducidos</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Números introducidos</h1>
+
+	<script>
+		var contador = 0;
+		var num = "";
+		do {
+			num = prompt("Introduce un número (9999 para terminar):");
+			if (num != "9999") {
+				contador++;
+			}
+		} while (num != "9999");
+		alert("Has introducido " + contador + " números.");
+	</script>
+</body>
+</html>

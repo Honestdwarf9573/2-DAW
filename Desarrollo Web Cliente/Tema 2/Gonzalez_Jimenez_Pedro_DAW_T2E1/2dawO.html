@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 15</title>
+  </head>
+  <body>
+    <script>
+      var producto = 1;
+      var numero = 0;
+      
+      while(numero != 9999) {
+        numero = prompt("Introduce un número (9999 para terminar):");
+        if(numero != 9999) {
+          producto *= numero;
+        }
+      }
+      
+      alert("El producto de los números introducidos (exceptuando el 9999) es " + producto + ".");
+    </script>
+  </body>
+</html>

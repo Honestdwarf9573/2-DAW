@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cálculo de circunferencia y área de un círculo</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Cálculo de circunferencia y área de un círculo</h1>
+	<p>Introduce el radio del círculo:</p>
+	<input type="number" id="radio">
+	<button onclick="calcular()">Calcular</button>
+	<p id="resultado"></p>
+
+	<script>
+		function calcular() {
+			var radio = parseFloat(document.getElementById("radio").value);
+			var circunferencia = 2 * Math.PI * radio;
+			var area = Math.PI * Math.pow(radio, 2);
+			document.getElementById("resultado").innerHTML = "La circunferencia es: " + circunferencia.toFixed(2) + "<br>El área es: " + area.toFixed(2);
+		}
+	</script>
+</body>
+</html>

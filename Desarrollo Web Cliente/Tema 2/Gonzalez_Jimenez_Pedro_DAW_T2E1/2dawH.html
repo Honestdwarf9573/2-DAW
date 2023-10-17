@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversión de número en base 16 y base 5</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Conversión de número en base 16 y base 5</h1>
+	<p>Introduce un número entero:</p>
+	<input type="number" id="numero">
+	<button onclick="calcular()">Calcular</button>
+	<p id="resultado"></p>
+
+	<script>
+		function calcular() {
+			var numero = parseInt(document.getElementById("numero").value);
+			var base16 = numero.toString(16);
+			var base5 = numero.toString(5);
+			document.getElementById("resultado").innerHTML = "Número en base 16: " + base16 + "<br>Número en base 5: " + base5;
+		}
+	</script>
+</body>
+</html>

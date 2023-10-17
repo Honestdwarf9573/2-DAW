@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resta de números</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Resta de números</h1>
+	<p>Introduce dos números para restar:</p>
+	<input type="number" id="num1">
+	<input type="number" id="num2">
+	<button onclick="restar()">Restar</button>
+	<p id="resultado"></p>
+
+	<script>
+		function restar() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var resultado = num1 - num2;
+			document.getElementById("resultado").innerHTML = "El resultado es: " + resultado;
+		}
+	</script>
+</body>
+</html>

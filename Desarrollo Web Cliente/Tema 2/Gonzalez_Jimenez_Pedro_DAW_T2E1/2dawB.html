@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>División de números</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>División de números</h1>
+	<p>Introduce dos números para dividir:</p>
+	<input type="number" id="num1">
+	<input type="number" id="num2">
+	<button onclick="dividir()">Dividir</button>
+	<p id="resultado"></p>
+
+	<script>
+		function dividir() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			if (!isNaN(num1) && !isNaN(num2)) {
+				if (num2 != 0) {
+					var resultado = num1 / num2;
+					document.getElementById("resultado").innerHTML = "El resultado es: " + resultado;
+				} else {
+					document.getElementById("resultado").innerHTML = "No se puede dividir entre cero";
+				}
+			} else {
+				document.getElementById("resultado").innerHTML = "Solo se pueden dividir números";
+			}
+		}
+	</script>
+</body>
+</html>
