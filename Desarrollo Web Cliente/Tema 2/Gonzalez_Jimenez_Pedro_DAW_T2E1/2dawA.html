@@ -5,17 +5,30 @@
 	<meta charset="UTF-8">
 </head>
 <body>
+	<!-- Encabezado de nivel 1 -->
 	<h1>Resta de números</h1>
+
+	<!-- Párrafo para solicitar dos números para restar -->
 	<p>Introduce dos números para restar:</p>
+
+	<!-- Campos de entrada para los números -->
 	<input type="number" id="num1">
 	<input type="number" id="num2">
+
+	<!-- Botón para realizar la resta -->
 	<button onclick="restar()">Restar</button>
+
+	<!-- Párrafo para mostrar el resultado -->
 	<p id="resultado"></p>
 
 	<script>
+		// Función para realizar la resta
 		function restar() {
+			// Obtener los números introducidos
 			var num1 = parseFloat(document.getElementById("num1").value);
 			var num2 = parseFloat(document.getElementById("num2").value);
+
+			// Restar los números y mostrar el resultado
 			var resultado = num1 - num2;
 			document.getElementById("resultado").innerHTML = "El resultado es: " + resultado;
 		}

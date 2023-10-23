@@ -6,16 +6,24 @@
   </head>
   <body>
     <script>
+      // Variable para almacenar el producto de los números introducidos
       var producto = 1;
+
+      // Variable para almacenar el número introducido
       var numero = 0;
       
+      // Bucle while para solicitar números al usuario
       while(numero != 9999) {
+        // Solicitar al usuario que introduzca un número (9999 para terminar)
         numero = prompt("Introduce un número (9999 para terminar):");
+
+        // Multiplicar el número introducido por el producto si no es 9999
         if(numero != 9999) {
           producto *= numero;
         }
       }
       
+      // Mostrar una alerta con el producto de los números introducidos (excepto el 9999)
       alert("El producto de los números introducidos (exceptuando el 9999) es " + producto + ".");
     </script>
   </body>
