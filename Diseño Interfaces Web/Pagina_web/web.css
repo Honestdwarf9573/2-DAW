@@ -1,0 +1,22 @@
+.cabecera{
+display: flex;
+flex-direction: row;
+text-align: center;
+justify-content: space-around;
+align-items: center;
+}
+
+div{
+    border: solid red 5px;
+}
+section{
+    border: solid blue 5px;
+}
+
+img{
+    width: 100%;
+}
+
+header{
+    background-color:#FFA971;
+}
