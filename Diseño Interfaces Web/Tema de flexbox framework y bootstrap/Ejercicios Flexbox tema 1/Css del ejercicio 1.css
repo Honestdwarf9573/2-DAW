@@ -1,0 +1,88 @@
+.contenedor{
+display: flex;
+border: 10px solid red;
+height: 100vh;
+
+flex-flow: row;
+}
+
+.caja1{
+    background: #1abc9c;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja2{
+    background: #3498db;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja3{
+    background: #9b59b6;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja4{
+    background: #34495e;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja5{
+    background: #f1c40f;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja6{
+    background: #e67e22;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja7{
+    background: #e74c3c;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja8{
+    background: #bdc3c7;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja9{
+    background: #2ecc71;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja10{
+    background:#16a085;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Datos de la empresa</title>
+        <!-- Enlaces a las hojas de estilo de Bootstrap y CSS personalizado -->
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Encabezado de la página -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Mi Empresa</a>
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Productos y servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Quiénes somos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contenido principal de la página -->
+        <main>
+            <div class="container">
+                <h1>Datos de la empresa</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="nombre-empresa">Nombre de la empresa</label>
+                        <input type="text" class="form-control"
+                            id="nombre-empresa"
+                            placeholder="Ingresa el nombre de la empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" class="form-control" id="direccion"
+                            placeholder="Ingresa la dirección de la empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Número de teléfono</label>
+                        <input type="tel" class="form-control" id="telefono"
+                            placeholder="Ingresa el número de teléfono de la empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" class="form-control" id="correo"
+                            placeholder="Ingresa el correo electrónico de la empresa">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            <div class="container">
+                <p>Todos los derechos reservados &copy; 2023 Mi Empresa</p>
+            </div>
+        </footer>
+
+        <!-- Enlaces a los scripts de Bootstrap y jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

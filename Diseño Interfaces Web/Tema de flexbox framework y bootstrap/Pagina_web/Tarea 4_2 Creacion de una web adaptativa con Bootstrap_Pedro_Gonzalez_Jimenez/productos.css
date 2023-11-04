@@ -1,0 +1,317 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+  /* Normalize.css para establecer un estilo consistente en todos los elementos HTML */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+
+  .cabecera {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      text-align: center;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+  }
+
+  .nav-link {
+      color: white !important;
+      font-weight: bold;
+      font-size: large;
+  }
+
+  header.abajo {
+      background: var(--color_fondo);
+      opacity: 50%;
+
+  }
+
+
+
+  .fondo_nav {
+    /* La imagen que se usa */
+    background-image: url(https://fondosmil.com/fondo/17182.jpg);
+
+    height: 100%;
+    /* Centrar la imagen y que se quede bien */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -o-object-position: 0%;
+       object-position: 0%;
+  }
+
+  header.abajo .logo,
+  header.abajo ul li a {
+      color: white;
+  }
+
+  /*Para centrar la imagen grande del principio*/
+  .columna {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      text-align: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+  }
+
+  /*Para la cabezera*/
+  .encabezado-principal {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+      background: var(--menu-background-bar);
+      -webkit-filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .08));
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .08));
+      margin-bottom: calc(var(--menu-height)*-1);
+      -webkit-transition: background 300ms linear;
+      -o-transition: background 300ms linear;
+      transition: background 300ms linear;
+  }
+
+
+
+  /*Para la imagen que estan el la cabecera*/
+  .logo {
+
+      width: 100px;
+      height: 100px;
+  }
+
+  /*Para las imágenes que debajo de nuestras cartas*/
+  .imagen {
+      width: 300px;
+      height: 300px;
+  }
+
+  .fondo {
+      /* La imagen que se usa */
+      background-image: url(https://traptoreditorial.com/wp-content/uploads/2016/04/fondo-minimalista-negro-minimalist-background-fondo-sitio-web-minimalista-fondo-negro-web.jpg);
+
+      height: 100%;
+      /* Centrar la imagen y que se quede bien */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      -o-object-position: 0%;
+         object-position: 0%;
+
+  }
+
+  .fondo2 {
+      /* Lo mismo pero para la otra parte de la pagina */
+      background-image: url(https://static.vecteezy.com/system/resources/thumbnails/013/616/614/original/white-neon-frame-lighting-on-black-background-4k-60fps-free-video.jpg);
+
+      height: 100%;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+  }
+
+
+
+  .estilo_Letra {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--color_letra);
+      letter-spacing: 2px;
+      font-weight: bolder !important;
+      -webkit-transition: 0.7s;
+      -o-transition: 0.7s;
+      transition: 0.7s;
+  }
+
+  .estilo_Letra h6 {
+      font-size: 16px;
+      color: var(--color_letra);
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-weight: bold !important;
+  }
+
+
+
+
+  .disposicion {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      text-align: center;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      padding: 5px;
+  }
+
+
+  nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+  }
+
+ 
+
+  @media (max-width: 576px) {
+      body {
+          font-size: 15px;
+      }
+  }
+
+
+  /* Variables CSS (:root) */
+  :root {
+      --color_fondo: black;
+      --color_letra: white;
+  }
+
+  /* Estilos para el navbar en dispositivos móviles */
+  @media (max-width: 767px) {
+      .mobile-navbar {
+          display: block;
+          color: var(--color_letra);
+          font-size: 12px;
+      }
+  }
+
+
+  /* Media queries para optimizar el diseño en diferentes tamaños de pantalla */
+  @media (max-width: 768px) {
+
+      /* Estilos para pantallas de hasta 768 píxeles de ancho */
+      body {
+          font-size: 16px;
+      }
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+
+      /* Estilos para pantallas de entre 768 y 992 píxeles de ancho */
+      body {
+          font-size: 18px;
+      }
+  }
+
+  @media (min-width: 992px) {
+
+      /* Estilos para pantallas de más de 992 píxeles de ancho */
+      body {
+          font-size: 20px;
+      }
+  }
+
+  /* Container queries para asegurar que los elementos dentro de los contenedores se comporten de forma adecuada en distintos contextos de tamaño */
+  .container {
+      width: 100%;
+      max-width: 1200px;
+  }
+  /*Para las imágenes del slideshow */
+
+  .carousel-item img {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      max-height: 500px;
+      max-width: 500px;
+  }
+
+
+  img {
+      width: 100%;
+      padding: 5px;
+
+  }
+  /*Para ajustar bien el slideshow */
+
+  .slideshow-menu {
+      display: none;
+  }
+
+  .slideshow-menu a.active {
+      display: block;
+  }
+  /*Los ajustes del menu oculto que aparece cada vez que pasa una imagen del slideshow */
+
+  .menu_oculto {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      text-align: center;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+  }
+
+
+
+
+  div :nth-child(1) {
+
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--color_letra) !important;
+      letter-spacing: 2px;
+      font-weight: bolder !important;
+      -webkit-transition: 0.7s;
+      -o-transition: 0.7s;
+      transition: 0.7s;
+  }
+
+
+
+  h6 :first-child {
+      margin: 10px;
+      padding: 10px;
+  }
