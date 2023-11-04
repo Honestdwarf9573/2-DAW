@@ -1,0 +1,11 @@
+<script>
+    var palabra = prompt("Ingrese una palabra o texto");
+    var palabraInvertida = palabra.split("").reverse().join("");
+  
+    if (palabra.toLowerCase() === palabraInvertida.toLowerCase()) {
+      document.write("La palabra/texto es un palíndromo.");
+    } else {
+      document.write("La palabra/texto no es un palíndromo.");
+    }
+  </script>
+  

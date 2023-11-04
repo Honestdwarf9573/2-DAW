@@ -1,0 +1,15 @@
+<a href="#" onclick="generarValorAleatorio()">Hipervínculo</a>
+
+<script>
+function generarValorAleatorio() {
+   var num = Math.floor(Math.random() * 3);
+
+   if (num === 0) {
+      window.location.href = "http://www.hotmail.com";
+   } else if (num === 1) {
+      window.location.href = "http://www.gmail.com";
+   } else {
+      window.location.href = "http://www.yahoo.com";
+   }
+}
+</script>

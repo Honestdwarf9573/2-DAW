@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Example</title>
+    <script>
+        // Función para crear una cookie
+        function createCookie(name, value, days) {
+            var expires;
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toGMTString();
+            }
+            else {
+                expires = "";
+            }
+            document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+        }
+
+        // Función para leer el valor de una cookie
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+            }
+            return null;
+        }
+
+        // Función para borrar una cookie
+        function eraseCookie(name) {
+            document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+
+        // Función para manejar el contador de visitas
+        function handleVisitCounter() {
+            var visitCount = getCookie("visitCount");
+            if (visitCount) {
+                visitCount = parseInt(visitCount) + 1;
+            } else {
+                visitCount = 1;
+            }
+            createCookie("visitCount", visitCount, 365);
+            document.getElementById("visitCounter").innerHTML = "Visitas: " + visitCount;
+        }
+    </script>
+</head>
+<body onload="handleVisitCounter()">
+    <h1>Cookie Example</h1>
+    <p id="visitCounter"></p>
+    <button type="button" onclick='createCookie("usuario", "Pedro", 365);'>Crear una Cookie</button>
+    <button type="button" onclick='alert("usuario=" + getCookie("usuario"));'>Ver las Cookies</button>
+    <button type="button" onclick='eraseCookie("usuario");'>Borrar Cookies</button>
+</body>
+</html>

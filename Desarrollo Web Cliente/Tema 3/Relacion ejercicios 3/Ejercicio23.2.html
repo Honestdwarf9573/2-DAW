@@ -1,0 +1,15 @@
+<script>
+    var nombres = [];
+    var nombre;
+  
+    do {
+      nombre = prompt("Ingrese un nombre (o 'Fin' para terminar)");
+  
+      if (nombre.toLowerCase() !== "fin") {
+        nombres.push(nombre);
+      }
+    } while (nombre.toLowerCase() !== "fin");
+  
+    document.write("Se ingresaron " + nombres.length + " nombres.");
+  </script>
+  
