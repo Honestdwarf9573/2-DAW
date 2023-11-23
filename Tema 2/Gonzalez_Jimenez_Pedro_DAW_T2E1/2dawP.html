@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 16</title>
+  </head>
+  <body>
+    <script>
+      // Variable para almacenar la suma de los múltiplos de 23
+      var suma = 0;
+      
+      // Bucle for para generar los múltiplos de 23
+      for(var i = 23; i < 1000; i += 23) {
+        // Mostrar el múltiplo de 23 en el documento
+        document.write(i + "<br>");
+        
+        // Sumar el múltiplo al total de la suma
+        suma += i;
+      }
+      
+      // Mostrar la suma de todos los múltiplos de 23 inferiores a 1000
+      document.write("<br>La suma de todos los múltiplos de 23 inferiores a 1000 es " + suma + ".");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversión de número en base octal y base binaria</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<!-- Encabezado de nivel 1 -->
+	<h1>Conversión de número en base octal y base binaria</h1>
+
+	<!-- Párrafo para solicitar el número en base octal -->
+	<p>Introduce un número en base octal:</p>
+
+	<!-- Campo de entrada para el número -->
+	<input type="text" id="numero">
+
+	<!-- Botón para realizar el cálculo -->
+	<button onclick="calcular()">Calcular</button>
+
+	<!-- Párrafo para mostrar el resultado -->
+	<p id="resultado"></p>
+
+	<script>
+		// Función para realizar la conversión
+		function calcular() {
+			// Obtener el número introducido en base octal
+			var numero = document.getElementById("numero").value;
+
+			// Convertir el número a base decimal
+			var decimal = parseInt(numero, 8);
+
+			// Convertir el número decimal a base binaria
+			var binario = decimal.toString(2);
+
+			// Mostrar los resultados en el párrafo correspondiente
+			document.getElementById("resultado").innerHTML = "Número en base decimal: " + decimal + "<br>Número en base binaria: " + binario;
+		}
+	</script>
+</body>
+</html>

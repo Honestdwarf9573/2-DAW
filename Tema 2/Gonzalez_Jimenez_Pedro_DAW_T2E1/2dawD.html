@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doble, triple y cuádruple de un número</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<!-- Encabezado de nivel 1 -->
+	<h1>Doble, triple y cuádruple de un número</h1>
+
+	<!-- Párrafo para solicitar un número -->
+	<p>Introduce un número:</p>
+
+	<!-- Campo de entrada para el número -->
+	<input type="number" id="num">
+
+	<!-- Botón para realizar el cálculo -->
+	<button onclick="calcular()">Calcular</button>
+
+	<!-- Párrafo para mostrar el resultado -->
+	<p id="resultado"></p>
+
+	<script>
+		// Función para realizar el cálculo
+		function calcular() {
+			// Obtener el número introducido
+			var num = parseFloat(document.getElementById("num").value);
+
+			// Calcular el doble, triple y cuádruple del número
+			var doble = num * 2;
+			var triple = num * 3;
+			var cuadruple = num * 4;
+
+			// Mostrar los resultados en el párrafo correspondiente
+			document.getElementById("resultado").innerHTML = "El doble es: " + doble + "<br>El triple es: " + triple + "<br>El cuádruple es: " + cuadruple;
+		}
+	</script>
+</body>
+</html>

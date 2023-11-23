@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Números y suma introducidos</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<!-- Encabezado de nivel 1 -->
+	<h1>Números y suma introducidos</h1>
+
+	<script>
+		// Variable para contar los números introducidos
+		var contador = 0;
+
+		// Variable para almacenar la suma de los números introducidos
+		var suma = 0;
+
+		// Variable para almacenar el número introducido
+		var num = "";
+
+		// Bucle do-while para solicitar números al usuario
+		do {
+			// Solicitar al usuario que introduzca un número (9999 para terminar)
+			num = prompt("Introduce un número (9999 para terminar):");
+
+			// Incrementar el contador y la suma si el número introducido no es 9999
+			if (num != "9999") {
+				contador++;
+				suma += parseInt(num);
+			}
+		} while (num != "9999");
+
+		// Mostrar una alerta con la cantidad de números introducidos y su suma
+		alert("Has introducido " + contador + " números.\nLa suma es: " + suma);
+	</script>
+</body>
+</html>

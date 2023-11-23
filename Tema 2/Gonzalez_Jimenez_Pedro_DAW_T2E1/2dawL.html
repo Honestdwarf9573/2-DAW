@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Producto de dos números</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<!-- Encabezado de nivel 1 -->
+	<h1>Producto de dos números</h1>
+
+	<!-- Párrafo de instrucciones -->
+	<p>Introduce dos números positivos menores de 57:</p>
+
+	<!-- Campo de entrada para el primer número -->
+	<input type="number" id="num1">
+
+	<!-- Campo de entrada para el segundo número -->
+	<input type="number" id="num2">
+
+	<!-- Botón para realizar el cálculo -->
+	<button onclick="calcular()">Calcular</button>
+
+	<!-- Elemento donde se mostrará el resultado -->
+	<p id="resultado"></p>
+
+	<script>
+		function calcular() {
+			
+			// Obtener el valor del primer número ingresado
+			var num1 = parseInt(document.getElementById("num1").value);
+
+			// Obtener el valor del segundo número ingresado
+			var num2 = parseInt(document.getElementById("num2").value);
+
+			// Validar que los números sean positivos y menores de 57
+			if (num1 <= 0 || num2 <= 0 || num1 >= 57 || num2 >= 57) {
+				document.getElementById("resultado").innerHTML = "Los números deben ser positivos y menores de 57.";
+			} else {
+				// Calcular el producto de los dos números
+				var resultado = num1 * num2;
+
+				// Mostrar el resultado en el elemento correspondiente
+				document.getElementById("resultado").innerHTML = "El producto es: " + resultado;
+			}
+		}
+	</script>
+</body>
+</html>

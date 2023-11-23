@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Conversión de temperatura</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<!-- Encabezado de nivel 1 -->
+		<h1>Conversión de temperatura</h1>
+
+		<script>
+		// Variables para almacenar las temperaturas en Farenheit y Celsius
+		var farenheit, celsius;
+
+		// Variable para almacenar la cadena de texto a mostrar en la alerta
+		var s = "";
+
+		// Bucle for para generar las temperaturas en Celsius y Farenheit
+		for (i = -2; i <= 12; i++) {
+			// Calcular la temperatura en Celsius
+			celsius = 10 * i;
+
+			// Calcular la temperatura en Farenheit
+			farenheit = 32 + (celsius * 9) / 5;
+
+			// Agregar la temperatura en Celsius y Farenheit a la cadena de texto
+			s = s + "C= " + celsius + " F= " + farenheit + "\n";
+
+			// Agregar una nota si se alcanza el punto de congelación del agua
+			if (celsius == 0) {
+				s = s + "Punto de congelación del agua\n";
+			}
+
+			// Agregar una nota si se alcanza el punto de ebullición del agua
+			if (celsius == 100) {
+				s = s + "Punto de ebullición del agua\n";
+			}
+		}
+
+		// Mostrar una alerta con la cadena de texto generada
+		alert(s);
+	</script>
+	</body>
+</html>
