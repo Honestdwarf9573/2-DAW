@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie de Fibonacci</title>
+</head>
+<body>
+    <script>
+        function fibonacci(n) {
+            if (n <= 1) {
+                return n;
+            } else {
+                let a = 0;
+                let b = 1;
+                let c;
+                for (let i = 2; i <= n; i++) {
+                    c = a + b;
+                    a = b;
+                    b = c;
+                }
+                return b;
+            }
+        }
+
+        // Mostrar los primeros 10 números de la serie de Fibonacci en la página web
+        for (let i = 0; i < 10; i++) {
+            document.write(fibonacci(i) + "<br>");
+        }
+    </script>
+</body>
+</html>

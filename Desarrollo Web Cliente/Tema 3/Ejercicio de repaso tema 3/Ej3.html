@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Última posición de una palabra o subcadena</title>
+  <script>
+    function encontrarUltimaPosicion() {
+      // Obtener la frase ingresada por el usuario
+      var frase = document.getElementById("frase").value;
+
+      // Obtener la palabra o subcadena ingresada por el usuario
+      var palabra = document.getElementById("palabra").value;
+
+      // Encontrar la última posición de la palabra o subcadena dentro de la frase
+      var ultimaPosicion = frase.lastIndexOf(palabra);
+
+      // Mostrar el resultado en un mensaje emergente
+      alert("La última posición de '" + palabra + "' es: " + ultimaPosicion);
+    }
+  </script>
+</head>
+<body>
+  <h1>Última posición de una palabra o subcadena</h1>
+  <input type="text" id="frase" placeholder="Ingrese una frase">
+  <br><br>
+  <input type="text" id="palabra" placeholder="Ingrese una palabra o subcadena">
+  <br><br>
+  <button onclick="encontrarUltimaPosicion()">Buscar última posición</button>
+</body>
+</html>

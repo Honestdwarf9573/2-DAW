@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Usuario</title>
+</head>
+<body>
+    <script>
+        const usuario = {
+            nombreUsuario: "ejemplo",
+            contrasena: "12345"
+        };
+        
+        function autenticar(nombreUsuario, contrasena) {
+            if (nombreUsuario === usuario.nombreUsuario && contrasena === usuario.contrasena) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        const nombreUsuarioIngresado = "ejemplo";
+        const contrasenaIngresada = "12345";
+        
+        if (autenticar(nombreUsuarioIngresado, contrasenaIngresada)) {
+            document.write("Inicio de sesión exitoso");
+        } else {
+            document.write("Credenciales incorrectas");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Equipos de fútbol</title>
+</head>
+<body>
+  <h1>Equipos de futbol</h1>
+  <ul></ul>
+  <script>
+    // Obtener la referencia al elemento <ul> en el DOM
+    var list = document.querySelector('ul');
+
+    // Definir un objeto con los nombres de los equipos
+    var equipos = {
+      MAN: 'Manchester United',
+      BAR: 'FC Barcelona',
+      REA: 'Real Madrid',
+      LIV: 'Liverpool',
+      JUV: 'Juventus'
+    };
+
+    // Definir un array con los códigos de los equipos
+    var codigos = ['MAN', 'BAR', 'REA', 'LIV', 'JUV'];
+
+    // Recorrer el array de códigos
+    for (var i = 0; i < codigos.length; i++) {
+      // Obtener el código actual del array
+      var codigo = codigos[i];
+
+      // Obtener el nombre del equipo correspondiente al código
+      var nombreEquipo = equipos[codigo];
+
+      // Crear un elemento <li> con el nombre del equipo y agregarlo a la lista
+      var listItem = document.createElement('li');
+      listItem.textContent = codigo + ': ' + nombreEquipo;
+      list.appendChild(listItem);
+    }
+  </script>
+</body>
+</html>

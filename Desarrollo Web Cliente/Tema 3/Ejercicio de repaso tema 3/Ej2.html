@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prueba de borrado de atributo</title>
+  <script>
+    // Definición de la función "coche" que crea un objeto con los atributos "modelo", "color", "kms" y "combustible"
+    function coche(modelo, color, kms, combustible) {
+      this.modelo = modelo;
+      this.color = color;
+      this.kms = kms;
+      this.combustible = combustible;
+    }
+
+    // Creación de dos objetos "coche" utilizando la función "coche"
+    var elmio = new coche("Mercedes E330", "negro", 120000, "diesel");
+    var eltuyo = new coche("BMV 318", "blanco", 210000, "gasolina");
+
+    // Mostrar encabezado en el documento
+    document.write("<h1>Prueba de borrado de atributo</h1>");
+
+    // Mostrar objeto "elmio" antes de borrar un atributo inexistente
+    document.write("<h2>Antes de borrar atributo inexistente:</h2>");
+    document.write("<ul>");
+    for (var attr in elmio) {
+      // Mostrar cada atributo y su valor en una lista HTML
+      document.write("<li>" + attr + ": " + elmio[attr] + "</li>");
+    }
+    document.write("</ul>");
+
+    // Intento de borrar un atributo inexistente en el objeto "elmio"
+    delete elmio.matricula;
+
+    // Mostrar objeto "elmio" después de intentar borrar un atributo inexistente
+    document.write("<h2>Después de borrar atributo inexistente:</h2>");
+    document.write("<ul>");
+    for (var attr in elmio) {
+      // Mostrar cada atributo y su valor en una lista HTML
+      document.write("<li>" + attr + ": " + elmio[attr] + "</li>");
+    }
+    document.write("</ul>");
+  </script>
+</head>
+<body>
+</body>
+</html>
