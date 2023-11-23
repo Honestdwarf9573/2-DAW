@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/originals/64/dd/41/64dd41a50bbb655cec46bc3104db54fb.jpg);
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  .piedras {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(https://png.pngtree.com/png-clipart/20210407/ourmid/pngtree-stone-rock-realistic-clipart-png-image_3204047.jpg);
+    background-size: cover;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  img{
+    width: 100px;
+    height: 100px;
+  }
+  .patricio-left,
+  .patricio-right {
+    position: absolute;
+    top: calc(50% - 100px);
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .patricio-left {
+    left: -200px;
+    animation-name: move-right;
+  }
+  
+  .patricio-right {
+    right: -200px;
+    animation-name: move-right;
+  }
+  
+  @keyframes move-right {
+    from {
+      transform: translateX(-200px);
+    }
+    
+    to {
+      transform: translateX(calc(100% + 200px));
+    }
+  }
+  
+  @keyframes move-left {
+    from {
+      transform: translateX(calc(100% + 200px));
+    }
+    
+    to {
+      transform: translateX(-200px);
+    }
+  }
+  
+  @keyframes bubble-animation {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    to {
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+  }
+  
+  .burbujas {
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    --random: calc(Math.random());
+  }
+  
+  
+  .burbuja {
+    position: absolute;
+    top: calc(100% + calc(var(--random) * -200px));
+    left: calc(20% + calc(var(--random) * 60%));
+    width: 40px;
+    height: 40px;
+    background-image: url(https://img.freepik.com/vector-gratis/burbujas-jabon-multicolores-transparentes-fondo-cuadros-bola-esferica-diseno-agua-espuma-lavado-agua_1284-41350.jpg);
+    background-size: contain;
+    animation-name: bubble-animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  
+  .burbuja:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .burbuja:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .burbuja:nth-child(3) {
+    animation-delay: 2s;
+  }
+  
+  .burbuja:nth-child(4) {
+    animation-delay: 3s;
+  }
+  
+  .burbuja:nth-child(5) {
+    animation-delay: 4s;
+  }
+  
+  .burbuja:nth-child(6) {
+    animation-delay: 5s;
+  }
+  
+  .burbuja:nth-child(7) {
+    animation-delay: 6s;
+  }
+  
+  .burbuja:nth-child(8) {
+    animation-delay: 7s;
+  }
+  
+  .burbuja:nth-child(9) {
+    animation-delay: 8s;
+  }
+  
+  .burbuja:nth-child(10) {
+    animation-delay: 9s;
+  }
+  
+  .burbuja:nth-child(11) {
+    animation-delay: 10s;
+  }
+  
+  .burbuja:nth-child(12) {
+    animation-delay: 11s;
+  }
+  
+  .burbuja:nth-child(13) {
+    animation-delay: 12s;
+  }
+  
+  .burbuja:nth-child(14) {
+    animation-delay: 13s;
+  }
+  
+  .burbuja:nth-child(15) {
+    animation-delay: 14s;
+  }
+  
+  .burbuja:nth-child(16) {
+    animation-delay: 15s;
+  }
+  
+  .burbuja:nth-child(17) {
+    animation-delay: 16s;
+  }
+  
+  .burbuja:nth-child(18) {
+    animation-delay: 17s;
+  }
+  
+  .burbuja:nth-child(19) {
+    animation-delay: 18s;
+  }
+  
+  .burbuja:nth-child(20) {
+    animation-delay: 19s;
+  }
+  
+  .burbuja:nth-child(21) {
+    animation-delay: 20s;
+  }
+  

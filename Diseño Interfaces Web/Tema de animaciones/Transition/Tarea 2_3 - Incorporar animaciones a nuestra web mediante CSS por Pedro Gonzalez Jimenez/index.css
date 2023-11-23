@@ -1,0 +1,718 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Normalize.css para establecer un estilo consistente en todos los elementos HTML */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+body {
+  overflow-x: hidden;
+}
+
+
+.cabecera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cabecera2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+}
+
+.prueba_navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+
+
+.nav-link {
+  color: white !important;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+
+
+/*Para centrado del texto de debajo de la imagen*/
+.columna {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*Para la cabecera*/
+.encabezado-principal {
+  position: relative;
+  height: 100px;
+  /* Ajusta la altura según tus necesidades */
+
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background: var(--menu-background-bar);
+  -webkit-filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .08));
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .08));
+  margin-bottom: calc(var(--menu-height)*-1);
+  -webkit-transition: background 300ms linear;
+  -o-transition: background 300ms linear;
+  transition: background 300ms linear;
+}
+
+
+
+/*Para la imagen que esta el la cabecera*/
+.logo {
+
+  width: 100px;
+  height: 100px;
+}
+
+.fondo {
+  /* La imagen que se usa */
+  background-image: url(https://traptoreditorial.com/wp-content/uploads/2016/04/fondo-minimalista-negro-minimalist-background-fondo-sitio-web-minimalista-fondo-negro-web.jpg);
+
+  height: 100%;
+  /* Centrar la imagen y que se quede bien */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-position: 0%;
+  object-position: 0%;
+
+}
+
+
+.fondo_nav {
+  /* La imagen que se usa para el navegador o algo relacionado con el */
+  background-image: url(https://fondosmil.com/fondo/17182.jpg);
+
+  height: 100%;
+  /* Centrar la imagen y que se quede bien */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-position: 0%;
+  object-position: 0%;
+}
+
+
+.fondo2 {
+  /* Lo mismo pero para la otra parte de la pagina */
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/013/616/614/original/white-neon-frame-lighting-on-black-background-4k-60fps-free-video.jpg);
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+
+
+.estilo_Letra {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--color_letra);
+  letter-spacing: 2px;
+  font-weight: bolder !important;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+}
+
+
+
+
+.estilo_Letra h6 {
+  font-size: 16px;
+  color: var(--color_letra);
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: bold !important;
+}
+
+
+
+
+.disposicion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+
+img {
+  padding: 10px;
+}
+
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+
+@media (max-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+
+
+}
+
+
+/* Variables CSS (:root) */
+:root {
+  --color_fondo: black;
+  --color_letra: white;
+}
+
+
+
+
+/* Selector '+' para seleccionar el elemento inmediatamente siguiente */
+
+h6+p {
+  font-family: Arial, Helvetica, sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--color_letra);
+  letter-spacing: 2px;
+
+  -webkit-transition: 0.7s;
+
+  -o-transition: 0.7s;
+
+  transition: 0.7s;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+
+
+
+/* Selector 'first-child' para seleccionar el primer elemento hijo */
+/*Para colorear de blanco en enlance a google maps*/
+a:first-child {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--color_letra);
+  letter-spacing: 2px;
+  font-weight: bolder !important;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+}
+
+/* Selector 'last-child' para seleccionar el último elemento hijo */
+
+
+
+/* Estilos para el navbar en dispositivos móviles */
+@media (max-width: 767px) {
+  .mobile-navbar {
+    display: block;
+    color: var(--color_letra);
+    font-size: 10px;
+
+  }
+
+  .letra {
+    font-size: 20px;
+    right: 60px;
+  }
+
+  p {
+
+    padding-top: 10px
+  }
+
+
+ 
+
+ 
+
+}
+
+@media (min-width: 672px) and (max-width: 768px) {
+
+  /* Estilos para pantallas de entre 768 y 992 píxeles de ancho */
+  .letra {
+    font-size: 30px;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  /* Estilos para pantallas de entre 768 y 992 píxeles de ancho */
+  .letra {
+    font-size: 30px;
+    right: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* Estilos para pantallas de más de 992 píxeles de ancho */
+  body {
+    font-size: 20px;
+  }
+
+
+  .letra {
+    font-size: 50px;
+    right: 100px;
+  }
+
+
+
+}
+
+
+/* Container queries para asegurar que los elementos dentro de los contenedores se comporten de forma adecuada en distintos contextos de tamaño */
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+h2:first-child {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--color_letra);
+  letter-spacing: 2px;
+  font-weight: bolder !important;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+}
+
+
+.contenedor {
+  /* Lo mismo pero para la otra parte de la pagina */
+  background-image: url(https://comessgroup.com/wp-content/uploads/2022/06/pablo-merchan-montes-Orz90t6o0e4-unsplash-2.jpg);
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*Nadie sabe lo que me ha costado esto*/
+  height: 50vw;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  background-blend-mode: multiply;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+}
+
+/*
+Animacion de fade-in común para todas las paginas
+*/
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animacion-fade-in {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/*
+Animación de escalado en las palabras de la cabecera
+*/
+.nav-link:hover {
+  transform: scale(1.25);
+}
+
+/*
+Animación de desplazamiento
+*/
+.desplazar {
+  animation: desplazamiento 10s infinite linear;
+}
+
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animacion:hover {
+
+  animation: volteo 2s ease-in-out;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/*
+  Animación de rotación en el eje X en el slideshow
+
+  */
+@keyframes volteo {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    transform: rotateX(180deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+
+footer img:hover {
+  animation: escalado 2s linear;
+
+
+}
+
+
+/*
+Animación de escalado para las imágenes del footer
+*/
+
+@keyframes escalado {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+
+}
+
+
+
+.circulo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+
+}
+
+/*
+Animaciones con todos los transform aplicados para mover 2 imágenes
+*/
+@keyframes general1 {
+
+  0% {
+    transform: translateX(-500px) translateY(0) skew(25deg) rotate(90deg) scale(1.05);
+
+  }
+
+  50% {
+    transform: translateX(100px) translateY(0) skew(50deg) rotate(180deg) scale(1.15);
+
+
+  }
+
+  100% {
+    transform: translateX(300px) translateY(0) skew(75deg) rotate(360deg) scale(1);
+
+  }
+
+
+}
+
+@keyframes general2 {
+
+  0% {
+    transform: translateX(-50px) translateY(0) skew(25deg) rotate(90deg) scale(1.15);
+
+  }
+
+  50% {
+    transform: translateX(300px) translateY(0) skew(50deg) rotate(180deg) scale(1.25);
+
+
+  }
+
+  100% {
+    transform: translateX(400px) translateY(0) skew(75deg) rotate(360deg) scale(1);
+
+  }
+
+
+}
+
+
+.imagen_animada1 {
+  width: 100px;
+  height: 100px;
+
+  animation-name: general1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+
+
+}
+
+
+.imagen_animada2 {
+  width: 100px;
+  height: 100px;
+
+  animation-name: general2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+
+
+}
+
+
+/*
+Animación avanzada aplicada a la cabecera,generando un fondo animado
+*/
+
+.area {
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 300px);
+  /* Ajusta la altura según la altura del encabezado */
+  z-index: -1;
+
+
+  background: black;
+  background: -webkit-linear-gradient(to left, #000000, #2a31b4);
+  width: 100%;
+  height: 100vw;
+
+
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: white;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+
+}
