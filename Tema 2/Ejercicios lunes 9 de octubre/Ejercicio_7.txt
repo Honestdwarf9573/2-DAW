@@ -1,3 +1,0 @@
-Number("9 9"); Dará NaN que es que no es un número puesto que es una cadena de texto y como es 9, espacio, 9 no se puede convertir en un numero
-
-Number("dos") Dará Nan porque sigue siendo una cadena de texto y "dos" no es un número
