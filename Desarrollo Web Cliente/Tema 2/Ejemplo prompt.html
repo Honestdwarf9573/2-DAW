@@ -1,31 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo prompt</title>
-</head>
-<body>
-    <script>
-        var nota;
-        var intentos=3;
-        var acertar=false;
-        while(intentos>0){
-            nota = prompt("Di tu nota entre 0 y 10");
-            if(nota >= 0 && nota <= 10){
-                alert("Tu nota es: " + nota);
-                break;
-            }
-            intentos--;
-        }
-
-        
-  if (intentos < 0) {
-    alert("La nota ingresada no es válida. Por favor, inténtalo de nuevo. Te quedan " + intentos + " intentos.");
-  } else {
-    alert("Lo siento, has agotado tus intentos.");
-  }
-    </script>
-</body>
-</html>
-
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	
+	<!-- Addon -->
+	<Include file="RSAddon.lua"/>
+	
+	<!-- Internal libraries -->
+	<Include file="Libs\RSConstants.lua"/>
+	<Include file="Libs\RSTimeUtils.lua"/>
+	<Include file="Libs\RSUtils.lua"/>
+	<Include file="Libs\RSLogger.lua"/>
+	<Include file="Libs\RSTooltipScanners.lua"/>
+	<Include file="Libs\RSRoutines.lua"/>
+	
+	<!-- Data access libraries -->
+	<Include file="Data\RSMapDB.lua"/>
+	<Include file="Data\RSContainerDB.lua"/>
+	<Include file="Data\RSNpcDB.lua"/>
+	<Include file="Data\RSConfigDB.lua"/>
+	<Include file="Data\RSGeneralDB.lua"/>
+	<Include file="Data\RSAchievementDB.lua"/>
+	<Include file="Data\RSLootDB.lua"/>
+	<Include file="Data\RSGuideDB.lua"/>
+	<Include file="Data\RSCollectionsDB.lua"/>
+	
+	<!-- Services -->
+	<Include file="Service\RSRecentlySeenTracker.lua"/>
+	
+	<!-- POIs -->
+	<Include file="Service\POI\RSNpcPOI.lua"/>
+	<Include file="Service\POI\RSContainerPOI.lua"/
