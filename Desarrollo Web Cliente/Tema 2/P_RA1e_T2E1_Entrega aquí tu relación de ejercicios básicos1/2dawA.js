@@ -1,16 +1,17 @@
-function restarNumeros() {
-    // Pedimos al usuario que ingrese los números a restar
-    var numero1 = parseFloat(prompt("Ingrese el primer número:"));
-    var numero2 = parseFloat(prompt("Ingrese el segundo número:"));
-    
-    // Verificamos si los números ingresados son válidos
-    if (isNaN(numero1) || isNaN(numero2)) {
-      alert("Por favor, ingrese números válidos.");
-      return;
-    }
-    
-    // Realizamos la resta y mostramos el resultado al usuario
-    var resultado = numero1 - numero2;
-    alert("El resultado de la resta es: " + resultado);
-  }
- 
+<html>
+   <head>
+      <title>
+         P&aacute;gina con Javascript.
+      </title>
+      <script language="javascript">
+         var ventanaSecundaria;
+         var coordenadaX = 0;
+         var coordenadaY = 0;
+
+         function abrirVentana()
+         {
+            ventanaSecundaria = window.open("", "ventanaSecundaria", "width=400, height=300, left=200, top=150, resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no");
+         }
+
+         function cerrarVentanaSecundaria() {
+            if (ventanaSecundaria && !ventanaSecundaria.c
