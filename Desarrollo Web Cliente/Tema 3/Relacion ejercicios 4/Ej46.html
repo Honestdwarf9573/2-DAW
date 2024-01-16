@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 46</title>
+</head>
+
+<body>
+ 
+    <script>
+        // Definimos el vector de 1000 elementos y los premios
+        var vector = new Array(1000);
+        var premios = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];
+    
+        // Rellenamos el vector
+        for (var i = 0; i < vector.length; i++) {
+            vector[i] = Math.floor(Math.random() * 2);
+        }
+    
+        // Generar posiciones aleatorias para los premios
+        var posiciones_premio = [];
+        for (var i = 0; i < 10; i++) {
+            posiciones_premio.push(Math.floor(Math.random() * 1000));
+        }
+    
+        // Comparamos los números con los premios y si están premiados los imprimimos
+        for (var i = 0; i < posiciones_premio.length; i++) {
+            var pos = posiciones_premio[i];
+            if (vector[pos] == 1) {
+                document.write("Número con premio: " + pos + ", Cantidad: " + premios[i] + "<br>");
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 55</title>
+</head>
+<body>
+    <script>
+        function funcion(){
+            //Creamos las variables y una la pasamos a toString y otra join
+            var vector=[0,1,2,3,4,5,6,7,8,9];
+           var vector2=vector.toString();
+            var vector3=vector.join();
+            if(vector2==vector3){
+                document.write("El resultado de ejecución es igual");
+            }else{
+                document.write("El resultado de ejecución no es igual");
+            }
+        }
+            
+       funcion();
+    </script>
+</body>
+</html>

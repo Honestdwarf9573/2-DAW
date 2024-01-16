@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 50</title>
+</head>
+
+<body>
+    <script>
+        function almacenar() {
+            var numero;
+            var almacen = [];
+            var sueldo;
+            //Le preguntamos
+            numero = prompt("Dame un sueldo");
+
+            //Mientras numero sea distinto a 0
+            while (numero != 0) {
+                //Metemos en sueldo el numero pero convertido en numero;
+                sueldo = parseFloat(numero);
+                //Si sueldo es un numero
+                if (!isNaN(sueldo)) {
+                    almacen.push(sueldo);
+                }
+                //Le volvemos a preguntar
+                numero = prompt("Dame otro sueldo");
+            }
+            //Ordenamos de mayor a menor 
+            almacen.sort(function (a, b) {
+                return b - a;
+            });
+            //Mostramos almacen
+            document.write("Esto son los sueldos almacenados:<br>");
+            for (var i = 0; i < almacen.length; i++) {
+                document.write(almacen[i] + " ");
+            }
+        }
+        almacenar();
+    </script>
+</body>
+
+</html>

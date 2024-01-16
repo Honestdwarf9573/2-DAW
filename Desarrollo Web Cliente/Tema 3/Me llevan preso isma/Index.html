@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema de Votación</title>
+</head>
+<body>
+  <h1>Sistema de Votación</h1>
+
+  <ul id="opciones">
+    <li>
+      <span>Opción 1</span>
+      <button onclick="votar(1)">Votar</button>
+    </li>
+    <li>
+      <span>Opción 2</span>
+      <button onclick="votar(2)">Votar</button>
+    </li>
+    <li>
+      <span>Opción 3</span>
+      <button onclick="votar(3)">Votar</button>
+    </li>
+  </ul>
+
+  <script>
+    // Función para votar
+    function votar(opcion) {
+      // Verificar si el usuario ya ha votado
+      if (haVotado()) {
+        alert("Ya has votado. Gracias por tu participación.");
+        return;
+      }
+
+      // Obtener el recuento de votos actual para la opción seleccionada
+      var votos = obtenerVotos(opcion);
+
+      // Incrementar el recuento de votos
+      votos++;
+
+      // Guardar el recuento de votos actualizado en una cookie
+      document.cookie = "opcion" + opcion + "=" + votos + "; expires=Thu, 31 Dec 2023 23:59:59 UTC; path=/";
+
+      // Mostrar una ventana emergente agradeciendo al usuario por su voto
+      alert("¡Gracias por tu voto!");
+
+      // Actualizar la visualización de los resultados
+      mostrarResultados();
+    }
+
+    // Función para verificar si el usuario ya ha votado
+    function haVotado() {
+      var cookies = document.cookie.split(";");
+
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+
+        if (cookie.startsWith("opcion")) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    // Función para obtener el recuento de votos para una opción
+    function obtenerVotos(opcion) {
+      var cookies = document.cookie.split(";");
+
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+
+        if (cookie.startsWith("opcion" + opcion)) {
+          var partes = cookie.split("=");
+          return parseInt(partes[1]);
+        }
+      }
+
+      return 0;
+    }
+
+    // Función para mostrar los resultados en tiempo real
+    function mostrarResultados() {
+      var opciones = document.getElementById("opciones").getElementsByTagName("li");
+
+      for (var i = 0; i < opciones.length; i++) {
+        var opcion = opciones[i];
+        var span = opcion.getElementsByTagName("span")[0];
+        var boton = opcion.getElementsByTagName("button")[0];
+        var opcionId = i + 1;
+        var votos = obtenerVotos(opcionId);
+
+        span.innerHTML = "Opción " + opcionId + ": " + votos + " votos";
+
+        if (haVotado()) {
+          boton.disabled = true;
+        }
+      }
+    }
+
+    // Mostrar los resultados al cargar la página
+    mostrarResultados();
+  </script>
+</body>
+</html>

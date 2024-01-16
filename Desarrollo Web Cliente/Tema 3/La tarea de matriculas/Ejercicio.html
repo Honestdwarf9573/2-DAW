@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tarea - Juego de las Matrículas</title>
+    <script>
+      // Función para calcular las figuras en un número de 4 cifras
+      function calcularFiguras(numero) {
+        var cifras = numero.toString().split('');
+        var figuras = {
+          doblePareja: 0,
+          trio: 0,
+          escaleraSimple: 0,
+          escaleraCompleta: 0,
+          poker: 0
+        };
+
+        cifras.forEach(function(cifra, index) {
+          // Comprobar doble pareja
+          if (cifras.indexOf(cifra) !== index && cifras.lastIndexOf(cifra) !== index) {
+            figuras.doblePareja++;
+          }
+
+          // Comprobar trío
+          if (cifras.indexOf(cifra) !== index && cifras.lastIndexOf(cifra) !== index && cifras.lastIndexOf(cifra) !== cifras.indexOf(cifra)) {
+            figuras.trio++;
+          }
+
+          // Comprobar escalera simple
+          if (cifras.indexOf((parseInt(cifra) + 1).toString()) !== -1 && cifras.indexOf((parseInt(cifra) + 2).toString()) !== -1) {
+            figuras.escaleraSimple++;
+          }
+
+          // Comprobar escalera completa
+          if (cifras.indexOf((parseInt(cifra) + 1).toString()) !== -1 && cifras.indexOf((parseInt(cifra) + 2).toString()) !== -1 && cifras.indexOf((parseInt(cifra) + 3).toString()) !== -1) {
+            figuras.escaleraCompleta++;
+          }
+
+          // Comprobar poker
+          if (cifras.indexOf(cifra) !== index && cifras.lastIndexOf(cifra) !== index && cifras.lastIndexOf(cifra) !== cifras.indexOf(cifra) && cifras.lastIndexOf(cifra) !== -1) {
+            figuras.poker++;
+          }
+        });
+
+        return figuras;
+      }
+
+      // Función para mostrar las estadísticas
+      function mostrarEstadisticas(figuras) {
+        var estadisticas = document.getElementById('estadisticas');
+        estadisticas.innerHTML = '<h2>Estadísticas</h2>';
+        estadisticas.innerHTML += '<p>Doble pareja: ' + figuras.doblePareja + '</p>';
+        estadisticas.innerHTML += '<p>Trío: ' + figuras.trio + '</p>';
+        estadisticas.innerHTML += '<p>Escalera simple: ' + figuras.escaleraSimple + '</p>';
+        estadisticas.innerHTML += '<p>Escalera completa: ' + figuras.escaleraCompleta + '</p>';
+        estadisticas.innerHTML += '<p>Poker: ' + figuras.poker + '</p>';
+      }
+
+      // Función para manejar el click del botón calcular
+      function handleClick() {
+        var numero = document.getElementById('numero').value;
+        if (numero.length !== 4 || isNaN(numero)) {
+          alert('Introduce un número de 4 cifras.');
+        } else {
+          // Aumentar el contador y mostrarlo
+          var contador = localStorage.getItem('contador');
+          if (!contador) {
+            contador = 0;
+          }
+          contador++;
+          localStorage.setItem('contador', contador);
+          var vecesIntroducido = document.getElementById('vecesIntroducido');
+          vecesIntroducido.innerHTML = '<p>Número de veces que se ha introducido una matrícula correctamente: ' + contador + '</p>';
+
+          // Calcular y mostrar las figuras
+          var figuras = calcularFiguras(numero);
+          var resultado = document.getElementById('resultado');
+          resultado.innerHTML = '<h2>Figuras encontradas</h2>';
+          resultado.innerHTML += '<p>Doble pareja: ' + figuras.doblePareja + '</p>';
+          resultado.innerHTML += '<p>Trío: ' + figuras.trio + '</p>';
+          resultado.innerHTML += '<p>Escalera simple: ' + figuras.escaleraSimple + '</p>';
+          resultado.innerHTML += '<p>Escalera completa: ' + figuras.escaleraCompleta + '</p>';
+          resultado.innerHTML += '<p>Poker: ' + figuras.poker + '</p>';
+
+          // Mostrar las estadísticas
+          mostrarEstadisticas(figuras);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Juego de las Matrículas</h1>
+
+    <label for="numero">Introduce un número de 4 cifras:</label>
+    <input type="text" id="numero" name="numero">
+    <button onclick="handleClick()">Calcular</button>
+
+    <div id="resultado"></div>
+    <div id="estadisticas"></div>
+    <div id="vecesIntroducido"></div>
+
+    <script>
+      // Mostrar el número de veces almacenado al cargar la página
+      var contador = localStorage.getItem('contador');
+      if (!contador) {
+        contador = 0;
+      }
+      var vecesIntroducido = document.getElementById('vecesIntroducido');
+      vecesIntroducido.innerHTML = '<p>Número de veces que se ha introducido una matrícula correctamente: ' + contador + '</p>';
+    </script>
+  </body>
+</html>

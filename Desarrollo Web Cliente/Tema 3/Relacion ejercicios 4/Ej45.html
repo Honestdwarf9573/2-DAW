@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 45</title>
+</head>
+
+<body>
+    <script>
+        function aleatorio() {
+            var vector1 = new Array(10);
+            var vector2 = [];
+            var vector3 = [];
+            for (var i = 0; i < vector1.length; i++) {
+                //Sacara numeros aleatorios de 0 a 500
+                vector1[i] = Math.floor(Math.random() * 501);
+                //Si la posicion i de vector 1 es menor de 250
+                if (vector1[i] < 250) {
+                    //Añadimos la posicion al vector2
+                    vector2.push(vector1[i]);
+                    //Si la posicion i de vector1 es mayor o igual de 250
+                } else if (vector1[i] >= 250) {
+                    //Añadimos la posicion al vector3
+                    vector3.push(vector1[i]);
+                }
+            }
+            //Imprimos todo lo que requiere el ejercicio
+            document.write("Imprimimos la longitud del vector 2<br>");
+            document.write(vector2.length);
+            document.write("<br>");
+            document.write("Imprimimos la longitud del vector 3<br>");
+            document.write(vector3.length);
+            document.write("<br>");
+            document.write("Imprimimos el vector 1<br>");
+            for (var i = 0; i < vector1.length; i++) {
+                document.write(vector1[i] + " ");
+
+            }
+            document.write("<br>");
+            document.write("Imprimimos el vector 2<br>");
+            for (var i = 0; i < vector2.length; i++) {
+                document.write(vector2[i] + " ");
+
+            }
+            document.write("<br>");
+            document.write("Imprimimos el vector 3<br>");
+            for (var i = 0; i < vector3.length; i++) {
+                document.write(vector3[i] + " ");
+
+            }
+            document.write("<br>");
+
+
+
+
+
+        }
+        aleatorio();
+
+
+    </script>
+</body>
+
+</html>

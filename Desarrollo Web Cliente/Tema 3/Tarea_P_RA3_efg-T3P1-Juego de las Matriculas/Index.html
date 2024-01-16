@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juego de las Matrículas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        #resultado, #estadisticas {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de las Matrículas</h1>
+
+        <label for="numero">Introduce un número de 4 cifras:</label>
+        <input type="text" id="numero" name="numero">
+        <button onclick="handleClick()">Calcular</button>
+
+        <div id="resultado"></div>
+        <div id="vecesIntroducido"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

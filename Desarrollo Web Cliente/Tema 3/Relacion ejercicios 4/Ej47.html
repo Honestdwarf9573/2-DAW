@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 47</title>
+</head>
+
+<body>
+    <script>
+        function ultimo() {
+            var vector = new Array(5);
+            var ultimo = [];
+            //Añadimos los elementos aleatorios
+            for (var i = 0; i < vector.length; i++) {
+                vector[i] = Math.floor(Math.random() * 1000 + 1);
+            }
+            //Sacamos los 2 ultimos elementos
+            for (i = vector.length - 1; i > vector.length - 3; i--) {
+                ultimo.push(vector[i]);
+
+            }
+            //Realizamos la suma de las dos ultimas posiciones del vector
+            ultimo = ultimo[0] + ultimo[1];
+
+            //Mostramos los dos ultimos elementos
+            document.write("La suma de las dos últimas posiciones del vector es:<br>")
+            document.write(ultimo + "<br>");
+            document.write("Y la longitud del vector es:<br>")
+
+            document.write(vector.length);
+            
+
+        }
+        ultimo();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Generador de discursos</title>
+	<style>
+		/* Estilos para el cuerpo del documento */
+		body {
+			font-family: 'Comic Sans MS', sans-serif; /* Tipo de letra */
+			font-size: 20px; /* Tamaño de la letra */
+		}
+
+		/* Estilos para los botones de generar y reiniciar */
+		#generate-btn,
+		#reset-btn {
+			padding: 10px; /* Espaciado interno */
+			font-size: 1.2rem; /* Tamaño de la letra */
+			margin-right: 10px; /* Margen a la derecha */
+		}
+
+		/* Estilos para el div donde se mostrará el discurso */
+		#speech {
+			margin-top: 20px; /* Margen superior */
+			padding: 20px; /* Espaciado interno */
+			border: 1px solid #ccc; /* Borde */
+			white-space: pre-line; /* Conserva los saltos de línea y espacios en blanco */
+		}
+
+		/* Estilos para el div donde se mostrará el conteo */
+		#count {
+			margin-top: 20px; /* Margen superior */
+		}
+	</style>
+</head>
+
+<body>
+	<button id="generate-btn">Generar discurso</button> <!-- Botón para generar el discurso -->
+	<button id="reset-btn">Reiniciar</button> <!-- Botón para reiniciar el discurso -->
+	<div id="speech"></div> <!-- Div donde se mostrará el discurso -->
+	<div id="count"></div> <!-- Div donde se mostrará el conteo -->
+
+	<script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+
+</html>

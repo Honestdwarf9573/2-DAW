@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 51</title>
+</head>
+
+<body>
+    <script>
+        function eliminar_insertar() {
+            var vector = new Array(10);
+            //Añadimos los valores aleatorios de 0 a 10
+            for (var i = 0; i < vector.length; i++) {
+                vector[i] = Math.floor(Math.random() * 11);
+                //Eliminamos el 2 e insertamos el 1
+                if (vector[i] == 2) {
+                    vector.splice(i, 1, 1, 1);
+                }
+            }
+
+            // Mostramos el vector por si acaso
+           document.write("Mostramos el vector:<br>")
+           for (var i = 0; i < vector.length; i++) {
+               document.write(vector[i]+" ");
+            }
+        }
+        eliminar_insertar();
+    </script>
+</body>
+
+</html>

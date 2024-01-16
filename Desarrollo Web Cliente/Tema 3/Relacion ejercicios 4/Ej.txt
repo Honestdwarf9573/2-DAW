@@ -1,0 +1,57 @@
+45.- Crear un vector con 10 valores aleatorios comprendidos entre 1 y 500. Luego crea
+otros dos vectores y copia los elementos menores a 250 en el segundo vector y los
+mayores o iguales a 250 en el tercer vector. Imprimir los tamaños del segundo y tercer
+vector. Imprimir los tres vectores.
+46.- Crear un vector de 1000 elementos que representen los números de una rifa. Las
+posiciones indicaran los números que tienen premio. Almacena en dichas posiciones,
+generadas de forma aleatoria, 10 premios con las cantidades 1000,2000,3000 etc. .
+Imprime los números con premio y las cantidades de los mismos.
+47.- Crear un vector con 5 valores aleatorios comprendidos entre 1 y 1000. Luego extrae
+los dos últimos elementos, súmalos y muestrarlos. Imprimir también el tamaño final del
+vector.
+50.- Crea un script que nos permita almacenar por teclado los sueldos de un conjunto de
+empleados. Finaliza la carga al ingresar cero. Muestra por pantalla los sueldos ordenados
+de mayor a menor.
+51.- Crear un vector con una lista de 10 valores aleatorios. Luego borra los componentes
+donde hay un 2 y al mismo tiempo insertar dos elementos con el valor 1.
+52.- Crear un vector de 10 elementos con valores aleatorios comprendidos entre 0 y 1000.
+Buscar el menor y después generar otro vector a partir de dicha posición hasta el final.
+53.- Crear un vector con los nombres de 5 personas. Imprimelos despues por pantalla
+uno debajo de otro utilizando el método join para generar un string y añadele entre
+elementos la marca html <br>.
+55.- Crear un vector de 10 elementos. Inicializa los valores del vector cuando se crea.
+Inicializa dos variables que resulten de llamar primero al método toString() y la segunda
+variable inicializala llamando al método join() sin parámetros. Muestra un mensaje si el
+resultado de la ejecución de los dos métodos retorna el mismo valor (empleando un if
+para comparar los string)
+
+
+   <script>
+        
+        /*
+        
+        
+        //Definimos el vector de 1000 elementos y los premios
+        var vector = new Array(1000);
+        var premios = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];
+        //Rellenamos el vector
+        for (var i = 0; i < vector.length; i++) {
+            vector[i] = Math.floor(Math.random() * 1000);
+        }
+        //Comparamos los numeros con los premios y si estan premiados los imprimimos 
+        for (var i = 0; i < posicion.length; i++) {
+           if(vector[i]==premios[i]){
+            document.write(vector[i]+"<br>");
+            
+           }
+        }
+  
+
+
+        
+        
+        
+        
+        
+        */
+    </script>
