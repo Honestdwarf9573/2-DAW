@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="aqui"></p>
+    <script>
+       var fecha=new Date();
+       var dia= fecha.getDate();
+       var mes= fecha.getMonth()+1;
+       var año= fecha.getFullYear();
+       var fechaFormateada=dia+"/"+mes+"/"+año;
+
+        var dias= new Array("lunes","martes","miercoles","jueves","viernes","sabado","domingo");
+    dias[1]=fechaFormateada;
+    document.getElementById("aqui").innerHTML=dias;
+    </script>
+
+    
+</body>
+</html>

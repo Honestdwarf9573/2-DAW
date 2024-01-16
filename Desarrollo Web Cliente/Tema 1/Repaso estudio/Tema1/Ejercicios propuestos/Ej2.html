@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar imagen</title>
+</head>
+<body>
+    <h1>Cambio de imagenes con JavaScript</h1>
+
+    <img id="myFPImage" onclick="cambiaPic()" src="https://preview.redd.it/m4fu-looking-for-a-highly-submissive-futa-that-wants-to-v0-fjmj51vpquw91.jpg?width=315&format=pjpg&auto=webp&s=62445475eeec9a231867afb2828b5d2ca25c8d70" width="100" height="180" alt="">
+<p>Haz click sobre las letras para cambiarlas</p>
+<script>
+     var contador=1;
+    function cambiaPic(){
+       
+        var image= document.getElementById('myFPImage');
+   
+        if(contador==1){
+            image.src="https://preview.redd.it/m4fu-looking-for-a-highly-submissive-futa-that-wants-to-v0-fjmj51vpquw91.jpg?width=315&format=pjpg&auto=webp&s=62445475eeec9a231867afb2828b5d2ca25c8d70";
+        }else if(contador==2){
+            image.src="https://th.bing.com/th/id/OIP.37128g2bFeud_YiLSeZG3QAAAA?rs=1&pid=ImgDetMain";
+        }else if(contador==3){
+            image.src="https://th.bing.com/th/id/OIP.bLLe85e7x6xJPXh-UmyuBQHaKf?rs=1&pid=ImgDetMain";
+        }else if(contador==4){
+            image.src="https://i.pinimg.com/564x/2d/ff/0e/2dff0e70dfc9172c274a266772cee31f.jpg";
+        }
+        contador++;
+        if(contador > 4){
+            contador=1;
+        }
+       
+    }
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,18 @@
+Diferencias de JavaScript y de Java:
+
+1-Los Javascript se interpretan mientras que Java se compila.
+
+2-Los JavaScript utiliza componentes que ya existen, mientras que en Java se empieza desde cero.
+
+3-Los JavaScript se puede incluir dentro de otros programas.
+
+4-Los Java se ejecuta de forma independiente, mientras que JavaScript se ejecuta muchas veces dentro de otro programa.
+
+5-JavaScript se ejecutan línea a línea.
+
+6-JavaScript no genera ficheros ejecutables.
+
+7-JavaScript no necesita ser compilados.
+
+8-JavaScript ha sido diseñado para  ser fácil de utilizar y programar.
+

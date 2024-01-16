@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar imagen</title>
+</head>
+<body>
+    <h1>Cambio de imagenes con JavaScript</h1>
+
+    <img id="myFPImage" onclick="cambiaPic()" src="https://th.bing.com/th/id/OIP.g1Pn6PWqAi_YpKNB3xIStAHaF3?w=232&h=184&c=7&r=0&o=5&pid=1.7" width="100" height="180" alt="">
+<p>Haz click sobre las letras para cambiarlas</p>
+<script>
+    function cambiaPic(){
+        var image= document.getElementById('myFPImage');
+        if(image.src.match("green")){
+            image.src="https://th.bing.com/th/id/OIP.g1Pn6PWqAi_YpKNB3xIStAHaF3?w=232&h=184&c=7&r=0&o=5&pid=1.7";
+        }else{
+            image.src="https://th.bing.com/th/id/R.d262ac4f890b329c5d76284e4f7847c0?rik=UOEuqmMZ81KcMA&riu=http%3a%2f%2fimagenes.4ever.eu%2fdata%2fdownload%2fnaturaleza%2fplantas%2ffrutas%2fmanzanas-verdes%2c-hoja-170748.jpg&ehk=omjNzMJfGZRsxlXxHB%2bV1oo%2bTPlSGpDBMslKn5FP3f4%3d&risl=&pid=ImgRaw&r=0";
+        }
+    }
+</script>
+</body>
+
+
+</html>
