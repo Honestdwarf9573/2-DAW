@@ -1,0 +1,90 @@
+**Conceptos básicos de TCP/IP**
+
+## 2.1 Modelo OSI
+
+El Modelo OSI (Modelo de Interconexión de Sistemas Abiertos) es un modelo de red descriptivo desarrollado en 1984 por ISO (Organización Internacional de Estándares). Está formado por 7 capas que definen las fases por las que pasan los datos para viajar de un dispositivo a otro en una red. Sin embargo, este modelo se utiliza principalmente con fines didácticos.
+
+### 2.1.1 Los 7 niveles del modelo OSI
+
+- Capa física: Encargada de transmitir toda la información a través de cable RJ45, wifi o fibra.
+- Capa de enlace de datos: Actúa como un switch para recibir los datos y enviar cada uno a su destino correspondiente.
+- Capa de red: Garantiza que los datos lleguen del origen al destino.
+- Capa de transporte: Transporta los datos de la máquina origen a la máquina destino. Aquí se encuentran los protocolos TCP o UDP.
+- Capa de sesión: Mantiene y controla el enlace establecido entre dos PCs.
+- Capa de presentación: Se encarga de la representación de la información.
+- Capa de aplicación: Permite a las aplicaciones acceder a las demás capas y define sus protocolos.
+
+### 2.1.2 Transmisión de los datos
+
+En una pila de protocolos, cada nivel resuelve una serie de tareas relacionadas con la transmisión de datos y proporciona un servicio definido a los niveles superiores. Los niveles más altos están más cerca del usuario, mientras que los niveles más bajos traducen los datos para que sean manipulables físicamente.
+
+## 2.2 Familia de protocolos de Internet: TCP/IP
+
+TCP/IP es un modelo similar al OSI que se utiliza en la práctica. Está formado por un conjunto de protocolos, incluyendo TCP (Transmission Control Protocol) e IP (Internet Protocol), y consta de cuatro capas.
+
+### 2.2.1 Los 4 niveles del modelo TCP/IP
+
+- Aplicación: Incluye los protocolos que proporcionan servicios como POP, SMTP, FTP, TELNET y HTTP.
+- Transporte: Maneja los datos y proporciona fiabilidad en su transporte. Aquí se encuentran TCP y UDP.
+- Red o Internet: Envía paquetes de información a sus destinos correspondientes utilizando el protocolo IP.
+- Enlace o Acceso a red: Se encarga de la transmisión a través del medio físico de cada host utilizando el protocolo ARP.
+
+TCP/IP necesita funcionar sobre una red o medio físico que tenga sus propios protocolos. Proporciona una abstracción que hace posible el intercambio de información entre medios y tecnologías incompatibles.
+
+## 2.3 Direccionamiento IP
+
+El protocolo IP forma parte de TCP/IP y se encarga de hacer llegar paquetes de datos a su destino. Cada paquete se envía de forma independiente y por distintos caminos. Para lograr esto, cada equipo en la red debe tener una dirección IP única.
+
+### Direccionamiento IP
+
+- Las direcciones IP ocupan 4 bytes (32 bits) y se expresan en formato decimal y binario.
+- Ejemplo: 192.168.10.5 en decimal.
+
+Una dirección IP es un número que identifica lógica y jerárquicamente a una interfaz de un dispositivo que utiliza el protocolo IP. A diferencia de la dirección IP, la dirección MAC es un número físico asignado a la tarjeta o dispositivo de red. La dirección IP se puede cambiar, pero la dirección MAC no.
+
+### 2.3.1 Direccionamiento con clases
+
+Existen tres clases principales de direccionamiento:
+
+- Clase A: 1 byte para la red, 3 para el host. Rango: 0.x.x.x a 127.x.x.x
+- Clase B: 2 bytes para la red, 2 para el host. Rango: 128.x.x.x a 191.x.x.x
+- Clase C: 3 bytes para la red, 1 para el host. Rango: 192.x.x.x a 223.x.x.x
+
+En cada clase, hay dos direcciones que no se asignan a los hosts:
+
+- Dirección de red: La primera dirección con todos los bits del host a cero.
+- Dirección de broadcast: La última dirección con todos los bits del host a uno.
+
+### Ejemplos
+
+Ejemplo 1:
+- Dirección de red: 192.168.20.0
+- Direcciones disponibles para hosts: 192.168.20.1 a 192.168.20.254
+- Dirección de broadcast: 192.168.20.255
+
+Ejemplo 2:
+- Dirección de red: 141.87.0.0
+- Direcciones disponibles para hosts: 141.87.0.1 a 141.87.255.254
+- Dirección de broadcast: 141.87.255.255
+
+### Números de red reservados
+
+Existen direcciones IP reservadas que tienen usos específicos:
+
+- 127.0.0.0/8: Designa la propia máquina (bucle local o loopback).
+- 10.0.0.0/8: Se utiliza para redes privadas de clase A (empresas grandes).
+- 169.254.0.0/16: Dirección de enlace local (indica problemas en un equipo).
+- 172.16.0.0/16 y 172.31.0.0/16: Redes privadas de clase B (universidades y grandes compañías).
+- 192.168.x.0/24: Redes privadas de clase C (compañías medianas y pequeñas).
+
+### Redes privadas
+
+En una misma red no pueden existir dos direcciones iguales, pero sí se pueden repetir en redes privadas distintas. En las redes privadas, se utilizan direcciones reservadas para evitar conflictos con direcciones de Internet.
+
+### Puerta de enlace
+
+La puerta de enlace es el nodo de la red que permite acceder a una red exterior. Cuando se envía un paquete que no pertenece a nuestra red, se envía a la puerta de enlace para su envío fuera de la red local. En una red privada, la puerta de enlace apuntará siempre al router.
+
+### Dirección IP pública y dirección IP privada
+
+Todos los equipos tienen una dirección IP pública asignada por el ISP (proveedor de servicios de Internet). Para conocer la dirección IP privada, se puede ejecutar el comando "ipconfig /all" en Windows, "ifconfig" en Linux o verificar en la configuración del dispositivo en Android.

@@ -1,0 +1,475 @@
+Conceptos básicos de TCP/IP
+
+2.1 Modelo Osi.
+
+Modelo de Interconexión de sistemas abiertos(OSI).
+
+Modelo de red descriptivo.
+
+Desarrollado en 1984 por ISO(Organización Internacional de Estándares)
+
+Está formado por 7 capas(define las fases por las que pasan los datos para viajar de un dispositivo a otro en una red)
+
+Modelo teórico(Solo se usa ya para fines didácticos)
+
+
+2.1.1 Los 7 niveles del modelo teórico OSI.
+
+Capa física:Encargada de transmitir toda la info.(A través de cable RJ45 o wifi/fibra)
+
+Capa de enlance de datos:Es el switch que se encarga de recibir los datos y enviar cada uno a su destino correspondiente.
+
+Capa de red:Encargada de que los datos lleguen del origen al destino.
+
+Capa de transporte:Encargada de transportar los datos de la máquina origen a la destino.(A esta capa pertenecen los protocolos TCP o UDP).
+
+Capa de sesión: Encargada de mantener y controlar el enlance establecido entre dos PCs.
+
+Capa de presentación: Encargada de la representación de la información.
+
+Capa de aplicación: Permite a las aplicaciones acceder a las demás capas y define sus protocolos.
+
+
+2.1.2 Transmisión de los datos.
+
+En una pila de protocolos, cada nivel resuleve una serie de tareas relacionada con 
+la transmisión de datos y proporciona un servicio definido a los niveles más altos.
+
+Los niveles más altos son los más cercanos al usuario mientras que los más bajos traducen los datos de forma que sean físicamente manipulables.
+
+2.2 Familia de protocolos de Internet: TCP/IP.
+
+TCP/IP es un modelo similar al OSI.
+
+Es un modelo real(Se usa).
+
+Formado por un conjunto de protocolos:
+
+TCP(Transmission Control Protocol),
+
+IP(Internet Protocol),
+
+Solo tiene cuatro capas.
+
+2.2.1 Los 4 niveles del modelo real TCP/IP.
+
+Aplicación.(Aplicación,presentación y sesión del modelo OSI).
+Se incluyen protocolos que proporcionan servicios(POP,SMTP,FTP,TELNET,HTTP).
+
+Transporte.(Transporte del modelo OSI).
+Maneja los datos y proporciona fiabilidad en su transporte(TCP y UDP).
+
+Red o Internet(Red del modelo OSI).
+Envia paquetes de información a sus destinos correspondientes(IP).
+
+Enlance o Acceso a red(Enlance y físico del modelo OSI).
+
+Se encarga de la transmisión a través del medio físico de cada host.(ARP).
+
+
+TCP/IP necesita funcionar sobre una red o medio físico que tenga sus propios protocolos.
+
+TCP/IP proporciona una abstracción haciendo posible el intercambio de info entre medios y tecnologías incompatibles.
+
+2.3 Direccionamiento IP.
+
+El protoclo IP forma parte de TCP/IP.
+
+Se encarga de hacer llegar paquetes de datos a su destino.
+
+Cada paquete se envía de forma independiente y por distintos caminos.
+
+Para poder hacer esto, el equipo de la red debe tener una dirección IP única.
+
+Direccionamiento IP: Asignación de direcciones a cada uno de los host o nodos de la red.
+
+Direcciones IP:
+Ocupan 4 bytes(32 bits).
+Ejemplo: 
+11000000.10101000.00001010.00000101
+192.168.10.5 en decimal.
+
+Una dirección IP es un número que identifica lógica y jerárquicamente a una interfaz de un dispositivo que use el protocolo IP.
+
+Una dirección MAC es un número físico asignado a la tarjeta o dispositivo de red.
+
+La dirección IP se puede cambiar, la MAC no.
+
+
+2.3.1 Direccionamiento con clases.
+
+Hay 3 tipos:
+
+Clase A: 1 byte para la red, 3 para host.
+
+de 0.x.x.x a 127.x.x.x
+
+16.777.214 números de  host.
+
+Clase B:2 bytes para la red, 2 para host.
+
+De 128.x.x.x a 191.x.x.x
+
+65.534 números de host.
+
+Clase C: 3 bytes para la red, 1 para host.
+
+De 192.x.x.x a 223.x.x.x 
+
+254 números de host.
+
+Hay dos direcciones que no asignamos a los host:
+Dirección de red(La primera de todas, la que tiene todos los bits de host a cero)
+
+Hace referencia a la red.
+
+Dirección de broadcast(La última de todas, la que tiene todos los bits a uno).
+
+Se usa para enviar un mensaje a todos los equipos.
+
+
+Ejemplos.(Copiados del libro.)
+
+Ejemplo 1: En una red de clase C podemos tener las siguientes direcciones:
+
+➢ 192.168.20.0 como dirección de red.
+
+➢ 192.168.20.1 a 192.168.20.254 como direcciones disponibles para hosts de la red.
+
+➢ 192.168.20.255 como dirección de broadcast.
+
+Vamos a analizarlo:
+
+➢ Sabemos que se trata de una red de clase C porque el primer byte es 192 (o dicho de
+
+otra manera, los primeros bits son 110).
+
+➢ Si es una red de clase C, ya sabemos que todas las direcciones de la red coinciden en
+
+los tres primeros bytes, que son la parte de la dirección que identifica a la red. Nos
+
+queda por tanto, el último byte para asignar un número distinto a cada equipo.
+
+➢ La dirección que resulta de poner a 0 todos los bits de host (192.168.20.0) no se
+
+puede asignar a un equipo, porque está reservada para la dirección de red.
+
+➢ La dirección que resulta de poner a 1 todos los bits de host (192.168.20.255) no se
+
+puede asignar a un equipo, porque está reservada para el broadcast.
+
+➢ El resto de combinaciones de los bits de host (desde 1 hasta 254) son las direcciones
+
+disponibles para los equipos de la red.
+
+
+Ejemplo 2: En una red de clase B podemos tener las siguientes direcciones:
+
+➢ 141.87.0.0 como dirección de red.
+
+➢ 141.87.0.1 a 141.87.255.254 como direcciones disponibles para hosts de la red.
+
+➢ 141.87.255.255 como dirección de broadcast.
+
+Vamos a analizarlo:
+
+➢ Sabemos que se trata de una red de clase B porque el primer byte es 141 (o dicho de
+
+otra manera, los primeros bits son 110).
+
+➢ Si es una red de clase B, ya sabemos que todas las direcciones de la red coinciden en
+
+los dos primeros bytes, que son los que identifican a la red. Nos quedan por tanto, los
+
+dos últimos bytes para asignar un número distinto a cada equipo.
+
+➢ La dirección que resulta de poner a 0 todos los bits de host (141.87.0.0) no se puede
+
+asignar a un equipo, porque está reservada para la dirección de red.
+
+➢ La dirección que resulta de poner a 1 todos los bits de host (141.87.255.255) no se
+
+puede asignar a un equipo, porque está reservada para el broadcast.
+
+➢ El resto de combinaciones de los bits de host (desde 0.1 hasta 255.254) son las
+
+direcciones disponibles para los equipos de la red.
+
+Nota: Cuando se expresa una dirección IP se suele indicar el número de bytes que forman
+parte de la red. Por ejemplo, la dirección 192.168.20.17/24 se expresa con el /24 para indicar que
+los primeros 24 bits son la parte de red y, por tanto, los 8 bits restantes son la parte del host.
+De la misma manera, hacemos referencia a la red completa poniendo la dirección de red (con
+ceros en la parte del host) y el número de bits que forman parte de red: 192.168.20.0/24 es la red a
+la que pertenece la IP del ejemplo
+
+
+Números de red reservados.
+
+Existen direcciones IP reservadas.
+
+127.0.0.0/8: Designan a la propia máquina(bucle local o loopback.)
+
+10.0.0.0/8:Se usan para una red privada de clase A.(Empresas grandes)
+
+169.254.0.0/16: Dirección de enlance local.(Si un equipo tiene alguna de estas direcciones es que tiene problemas).
+
+172.16.0.0/16 y 172.31.0.0/16: Redes privadas de clase B.(Universidades y grandes compañias)
+
+192.168.x.0/24: Redes privadas de clase C.(Compañias medias y pequeñas)
+
+
+
+Redes privadas.
+
+En una misma red no pueden existir dos
+direcciones iguales, pero sí se pueden repetir en redes
+privadas distintas. En las redes privadas usaremos
+direcciones reservadas porque sabemos que esas direcciones nunca existirán como direcciones de
+Internet y, por tanto, nunca habrá conflicto.
+
+
+Puerta de enlance.
+
+Es el nodo de la red que permite acceder a una red exterior.
+
+Cuando se envía un paquete que no pertenece a nuestra red lo manda a la puerta de enlance para que se vaya.
+
+En una red privada la puerta de enlance apuntará siempre al router.
+
+2.3.2 Dirección IP pública y dirección IP privada.
+
+Todos los equipos tienen una dirección IP pública asignada por el ISP.
+
+Para saber la dirección privada debemos de ejecutar el siguiente comando.
+
+En Windows:
+ ipconfig /all
+
+ En Linux:
+
+ ifconfig
+
+ Nota: Desde la versión 18.04 de Ubuntu el comando ifconfig no estará disponible hasta que
+instales el paquete net-tools (sudo apt-get install net-tools).
+
+En Android:
+
+Ajustes/Acerca del dispositivo/Estado/Dirección IP
+
+Para averiguar la IP pública puedes usar páginas web que hay para ver esa info(http://www.whatsmyip.org/)
+
+
+
+2.3.3 Direccionamiento con máscara. Subnetting.
+
+Se usa subnetting para redimensionar una red de alguna clase.
+Si tenemos que crear una red con 300
+ordenadores no nos vale una red de clase C porque sólo admite 254, por tanto tenemos que recurrir
+a una de clase B que está dimensionada para 65.534 que, como puedes ver, es exagerado.
+
+
+Prestas bits de la parte de host a la de red.
+
+Para definir una subred necesitamos:
+
+Dirección de red: La que tiene todos los bits de host a 0.
+
+Máscara: Indica el tamaño de cada una de las partes.
+
+Por ejemplo, la máscara de red en una red de clase A debe indicar que la parte
+de red ocupa los 8 primeros bits, o sea:
+11111111.00000000.00000000.00000000
+Eso se puede expresar de dos formas:
+255.0.0.0 o bien /8
+
+Igualmente la máscara de una red de clase B:
+11111111.11111111.00000000.00000000
+se puede indicar con 255.255.0.0 ó /16 y la de una red de clase C:
+11111111.11111111.11111111.00000000
+Se puede indicar como 255.255.255.0 ó /24.
+
+
+Cuando usamos el subnetting indicamos el tamaño de cada una de las partes de la dirección IP.
+
+Eso nos permite olvidar las clases A B o C.
+
+Nota: Aunque el subnetting deja anticuado el uso de clases, perduran las direcciones
+reservadas que se establecieron con esas clases.
+
+Ejemplo:
+Supongamos que en el instituto tenemos una red de clase C con la dirección 192.168.20.0 y
+queremos separarla en 3 subredes para destinarlas a profesorado, alumnado y dirección. Para ello
+cogeremos "prestados" dos bits de los inicialmente destinados al host. Esos dos bits indicarán la
+subred, por ejemplo 00 para profesorado, 01 para alumnado y 10 para administración. Y cada una
+de las subredes podrá tener hasta 62 equipos (porque quedan 6 bits para el host y 26
+-2=62).
+La subred del profesorado la definimos con la dirección de red 192.168.20.0 y la máscara
+255.255.255.192. La otra forma de definirla es 192.168.20.0/26.
+La subred del alumnado la definimos con la dirección de red 192.168.20.64 y la máscara
+255.255.255.192. La otra forma de definirla es 192.168.20.64/26.
+La subred de administración la definimos con la dirección de red 192.168.20.128 y la máscara
+255.255.255.192. La otra forma de definirla es 192.168.20.128/26.
+Observa que la máscara de red corresponde a 11111111.11111111.11111111.11000000. En una
+máscara nunca se mezclan los unos y los ceros. Los unos, que son la parte de red, están al principio.
+Los ceros, que son la parte de host, están al final. Esta máscara escrita como dirección IP es
+255.255.255.192 y escrita como número es /26.
+Ejemplo:
+La dirección 172.16.1.1 con máscara 255.255.255.0 nos indica que los tres primeros octetos
+identifican la red y el cuarto identifica el host. Hay dos direcciones de cada subred que quedan
+reservadas: aquella que identifica la subred y que tiene todos los bits de la parte del host a 0 (en este
+caso 172.16.1.0) y la dirección para realizar broadcast en la subred y que tiene todos los bits de la
+parte del host a 1 (en este caso 172.16.1.255)
+
+
+2.3.4 Resumiendo.
+
+
+La configuración completa de un equipo para que forme parte de una red que usa TCP/IP
+requiere únicamente tres datos:
+
+➢ Dirección IP única para ese equipo.
+➢ Máscara de red.
+➢ Puerta de enlace.
+
+Es normal que se pida también la dirección dimensionada
+
+
+2.3.5 IPv6
+
+Versión mejorada de IPv4.
+
+Usa 128 bits para cada dirección,
+
+Ipv4 las direcciones IP se expresan en numeros decimales separados por puntos.
+
+Ipv6 las direcciones IP se expresan en 8 grupos de 4 cifras hexadecimales separados por :
+
+Ejemplo: Dirección IP de la versión 6 del protocolo.
+2001:0db8:85a3:08d3:1319:8a2e:0370:7334
+Como sabemos, cada dígito hexadecimal se corresponde con cuatro bits según la tabla
+siguiente:
+Cuarteto de bits Dígito Hex. Cuarteto de bits Dígito Hex.
+0000 0 1000 8
+0001 1 1001 9
+0010 2 1010 A
+0011 3 1011 B
+0100 4 1100 C
+0101 5 1101 D
+0110 6 1110 E
+0111 7 1111 F
+Para facilitar la escritura de direcciones se pueden usar las siguientes reglas:
+➢ Los ceros a la izquierda de cada grupo se pueden suprimir. Así, la dirección del
+ejemplo anterior también la podemos escribir como:
+2001:db8:85a3:8d3:1319:8a2e:370:7334
+➢ Cuando un grupo (o varios consecutivos) es todo ceros se pueden quitar
+sustituyéndolos por dos veces el símbolo dos puntos (::).
+Ejemplo: Varias formas de escribir la misma dirección IPv6
+2001:0DB8:0000:01A0:0000:0000:1428:57ab
+2001:0DB8::01A0:0000:0000:1428:57ab
+2001:0DB8:0000:01A0::1428:57ab
+➢ La regla anterior sólo se puede aplicar una vez en cada dirección.
+Ejemplo: Dirección INCORRECTA porque no se sabe cuantos ceros hay en cada lado
+2001:0DB8::01A0::1428:57ab
+
+
+
+
+
+
+
+
+2.4 El protocolo DHCP.
+
+Direcciones fijas:
+
+Indicamos:
+
+Dirección a usar.
+
+Máscara de red.
+
+Puerta de enlance.
+
+Direcciones de los DNS.
+
+
+Direcciones dinámicas.(Cambian de dirección cada vez que se conectan a Internet)
+
+Son asignadas mediante el protocolo DHCP(Dynamic Host Configuration Protocol)
+
+Es necesario un equipo que actúe de servidor DHCP(que reciba peticiones y asigne la dirección IP.)
+
+Nota: asignar las direcciones desde cada uno de los equipos supone un trabajo muy
+complicado para administrar la red (habrá que recordar las direcciones y usadas y las direcciones
+libres), por eso lo más habitual es asignar direcciones dinámicas mediante DHCP. También existe la
+posibilidad de asignar direcciones fijas desde el servidor DHCP emparejando la dirección IP
+deseada con la MAC del equipo. Esto se suele llamar reserva. Las direcciones reservadas solo se
+asignan al equipo que le corresponde
+
+
+
+2.4.1 Funcionamiento:
+
+1. Cuando el equipo se enciende con Ip dinámica, envia un mensaje a todos los broadcast de la red.
+
+2.El mensaje llega al server.Responde ofreciendo una IP disponible.
+
+3. El cliente solicita el uso de los datos necesarios.
+
+4. El servidor acepta o deniega la solicitud.
+
+Aunque haya servidor DHCP, puede ser usado o no.
+
+Nota: Si en la misma red hubiese dos servidores DHCP contestando peticiones se formará un
+buen lío. Esto es algo habitual cuando los estudiantes de redes hacen prácticas de servicio DHCP.
+
+
+2.4.2 Clientes DHCP.
+
+
+Para ajustar la ip estática desde Windows:
+
+Inicio/Panel de control/Centro de redes/ Cambiar configuración del adaptador.
+
+
+Propiedades/Protocolo de internet version 4/Propiedades.
+
+Nota: Si configuramos así nuestro equipo
+en la red tendremos un tipo de dirección IP
+conocido como IP fija.
+
+
+Para ajustar la ip dinámica solo hay que seleccionar la opción
+
+Obtener una dirección Ip automaticamente.
+
+En Ubuntu 16 buscamos el
+icono de red que se encuentra en la
+parte derecha de la barra superior. Se
+trata de un dibujo de doble flecha, o
+bien, el típico de ondas wifi. Tras ese
+icono se esconde un menú donde
+debemos seleccionar:
+Editar las conexiones/
+seleccionamos la conexión
+adecuada/Editar/Ajustes de
+IPv4
+En el desplegable "Método"
+tenemos la posibilidad de elegir
+Manual para configurar todos los
+datos para una IP fija, o bien, DHCP para hacer uso del servidor DHCP.
+En Ubuntu 18 y posteriores, desde la
+esquina superior derecha accedemos a la
+configuración, seleccionamos el apartado Red y
+podemos configurar las redes cableadas o añadir
+una nueva.
+Podemos elegir entre el servicio DHCP
+automático, o la configuración manual.
+Nota: Recuerda que las direcciones de la red
+169.254.0.0/16 están reservadas para el caso de
+que un equipo no consiga una dirección IP. Esto
+puede ocurrir si está configurado como cliente
+DHCP pero no existe ningún servidor DHCP. Así
+que si en algún momento tu equipo tiene
+problemas para conectarse y observas que su dirección IP comienza por 169.254 tendrás que
+analizar por qué no encuentra al servidor DHCP.

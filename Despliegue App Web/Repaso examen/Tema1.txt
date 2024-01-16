@@ -1,0 +1,21 @@
+Arquitectura y tecnologías web.
+
+
+1.1 Aplicaciones web.
+
+Definición: Aplicaciones distribuidas a las que accede el usuario a través de un navegador.
+
+Concepto de aplicación distribuida: Se ejecuta sobre varias máquinas a la vez.
+
+Tienen 2 partes, servidor y cliente.
+
+Se interactúa con la app a través de un navegador web.
+
+Despliegue de aplicaciones web: Proceso de transferir y configurar recursos y aplicaciones a un servidor para su ejecución.
+Se puede hacer de forma manual a automática.
+
+1.2 Arquitecturas web.
+
+Puede ser simple o compleja.
+
+1.2.1 Servidor web de contenido estático(No se resume más, no hay examen de esto.)
